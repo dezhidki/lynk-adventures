@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{D0A009A5-C08D-4707-8C90-752193FE9C17}</ProjectGuid>
+    <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LynkAdventures</RootNamespace>
+    <AssemblyName>LynkAdventures</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
+    <XnaPlatform>Windows</XnaPlatform>
+    <XnaProfile>Reach</XnaProfile>
+    <XnaCrossPlatformGroupID>b8096b27-83aa-4c6e-aba0-f70cb4420f57</XnaCrossPlatformGroupID>
+    <XnaOutputType>Game</XnaOutputType>
+    <ApplicationIcon>Game.ico</ApplicationIcon>
+    <Thumbnail>GameThumbnail.png</Thumbnail>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <XnaCompressContent>false</XnaCompressContent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <XnaCompressContent>true</XnaCompressContent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.GamerServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Net" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BasicPhysicsUtils\BoundingBox2D.cs" />
+    <Compile Include="BasicPhysicsUtils\BoundingBoxOwner.cs" />
+    <Compile Include="BasicPhysicsUtils\HitSource.cs" />
+    <Compile Include="BasicPhysicsUtils\Directions.cs" />
+    <Compile Include="Controls\KeyboardHandler.cs" />
+    <Compile Include="Entities\EntityBombermanBomb.cs" />
+    <Compile Include="Entities\EntityBomberman.cs" />
+    <Compile Include="Entities\IDropable.cs" />
+    <Compile Include="Entities\Entity.cs" />
+    <Compile Include="Entities\EntityArrow.cs" />
+    <Compile Include="Entities\EntityBat.cs" />
+    <Compile Include="Entities\EntityItem.cs" />
+    <Compile Include="Entities\EntityItemArrow.cs" />
+    <Compile Include="Entities\EntityItemBow.cs" />
+    <Compile Include="Entities\EntityItemHealth.cs" />
+    <Compile Include="Entities\EntityItemRuby.cs" />
+    <Compile Include="Entities\EntityItemShield.cs" />
+    <Compile Include="Entities\EntityItemSword.cs" />
+    <Compile Include="Entities\EntityLiving.cs" />
+    <Compile Include="Entities\EntityPlayer.cs" />
+    <Compile Include="Entities\EntityRubyTest.cs" />
+    <Compile Include="Entities\EntitySlime.cs" />
+    <Compile Include="Entities\EntitySpider.cs" />
+    <Compile Include="Entities\TileEntities\TileEntity.cs" />
+    <Compile Include="Entities\TileEntities\TileEntityDoorButton.cs" />
+    <Compile Include="Entities\TileEntities\TileEntityBombermanExplosion.cs" />
+    <Compile Include="Entities\TileEntities\TileEntitySign.cs" />
+    <Compile Include="Entities\TileEntities\TileEntityTeleporter.cs" />
+    <Compile Include="Entities\Weapons\Weapon.cs" />
+    <Compile Include="Entities\Weapons\WeaponBow.cs" />
+    <Compile Include="Entities\Weapons\WeaponMelee.cs" />
+    <Compile Include="Entities\Weapons\WeaponShield.cs" />
+    <Compile Include="Entities\Weapons\WeaponSword.cs" />
+    <Compile Include="Graphics\AnimationHelper.cs" />
+    <Compile Include="Graphics\Camera.cs" />
+    <Compile Include="Graphics\RenderLayer.cs" />
+    <Compile Include="Graphics\Shaders.cs" />
+    <Compile Include="Graphics\Sprites\SpriteSheet.cs" />
+    <Compile Include="GameSpriteSheets.cs" />
+    <Compile Include="Graphics\Renderer.cs" />
+    <Compile Include="Gui\Gui.cs" />
+    <Compile Include="Gui\GuiAbout.cs" />
+    <Compile Include="Gui\GuiDeath.cs" />
+    <Compile Include="Gui\GuiDebug.cs" />
+    <Compile Include="Gui\GuiHealthBar.cs" />
+    <Compile Include="Gui\GuiIngame.cs" />
+    <Compile Include="Gui\GuiMainMenu.cs" />
+    <Compile Include="Gui\GuiManager.cs" />
+    <Compile Include="Gui\GuiMessageBox.cs" />
+    <Compile Include="Gui\GuiResources.cs" />
+    <Compile Include="Gui\GuiSwapWeapons.cs" />
+    <Compile Include="MathHelpers\ColorMath.cs" />
+    <Compile Include="MathHelpers\FastRandom.cs" />
+    <Compile Include="MathHelpers\GameMath.cs" />
+    <Compile Include="Sounds\Sound.cs" />
+    <Compile Include="World\Level.cs" />
+    <Compile Include="World\LevelBuilder.cs" />
+    <Compile Include="World\LevelDungeon1.cs" />
+    <Compile Include="World\LevelManager.cs" />
+    <Compile Include="World\Rooms\Room.cs" />
+    <Compile Include="World\Rooms\RoomBomberman.cs" />
+    <Compile Include="World\Rooms\RoomTileMaps.cs" />
+    <Compile Include="World\TestLevel1.cs" />
+    <Compile Include="World\LevelForest.cs" />
+    <Compile Include="World\Tiles\TileBlend.cs" />
+    <Compile Include="World\Tiles\TileBlended.cs" />
+    <Compile Include="World\Tiles\TileBrick.cs" />
+    <Compile Include="World\Tiles\TileBridge.cs" />
+    <Compile Include="World\Tiles\TileDarkDirt.cs" />
+    <Compile Include="World\Tiles\TileDarkGrass.cs" />
+    <Compile Include="World\Tiles\TileDoor.cs" />
+    <Compile Include="World\Tiles\TileFence.cs" />
+    <Compile Include="World\Tiles\TileGate.cs" />
+    <Compile Include="World\Tiles\TileOverEntity.cs" />
+    <Compile Include="World\Tiles\TileRedBrick.cs" />
+    <Compile Include="World\Tiles\TileRock.cs" />
+    <Compile Include="World\Tiles\TileRockBlend.cs" />
+    <Compile Include="World\Tiles\TileRockCorner.cs" />
+    <Compile Include="World\Tiles\TileTree.cs" />
+    <Compile Include="World\Tiles\Tile.cs" />
+    <Compile Include="World\Tiles\TileGrass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="World\Tiles\TileTrigger.cs" />
+    <Compile Include="World\Tiles\TileVoid.cs" />
+    <Compile Include="World\Tiles\TileWater.cs" />
+    <Compile Include="World\Tiles\TileWoodFloor.cs" />
+    <Compile Include="World\Tiles\TileWoodWall.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Game.ico" />
+    <Content Include="GameThumbnail.png">
+      <XnaPlatformSpecific>true</XnaPlatformSpecific>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Xna.Framework.4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft XNA Framework Redistributable 4.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LynkAdventuresContent\LynkAdventuresContent.contentproj">
+      <Project>{918F1978-F2DF-445E-88F4-5DD9D67C4DB2}</Project>
+      <Name>LynkAdventuresContent %28Content%29</Name>
+      <XnaReferenceType>Content</XnaReferenceType>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
+  <!--
+      To modify your build process, add your task inside one of the targets below and uncomment it. 
+      Other similar extension points exist, see Microsoft.Common.targets.
+      <Target Name="BeforeBuild">
+      </Target>
+      <Target Name="AfterBuild">
+      </Target>
+    -->
+</Project>
